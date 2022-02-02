@@ -138,6 +138,10 @@ main {
 
 /* Modal form */
 
+.error{
+  display: none;
+}
+
 .button {
   background: #fe142f;
   margin-top: 0.5em;
@@ -527,4 +531,3 @@ footer {
     opacity: 1;
   }
 }
-
