@@ -140,6 +140,8 @@ main {
 
 .error{
   display: none;
+  font-size: 0.7em;
+  color: #FE142F;
 }
 
 .button {
@@ -532,8 +534,3 @@ footer {
   }
 }
 
-.error{
-  display: none;
-  font-size: 1em;
-  color: #FE142F;
-}

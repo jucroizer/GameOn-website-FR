@@ -61,6 +61,9 @@ function submissionForm(){
 
   if(countTrue == verifTab.length){
     document.getElementById('inscription').reset();
+  }else{
+    event.preventDefault();
+    false;
   }
 } 
 // console.log(submissionForm());
