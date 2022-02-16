@@ -531,3 +531,9 @@ footer {
     opacity: 1;
   }
 }
+
+.error{
+  display: none;
+  font-size: 1em;
+  color: #FE142F;
+}
