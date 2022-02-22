@@ -51,11 +51,13 @@ img {
   padding: 7px 12px;
   margin: 5px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1em;
   font-family: Roboto, sans-serif;
 }
 
 .topnav a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
   background-color: #FE142F;
   color: #ffffff;
   border-radius: 8px;
@@ -71,13 +73,6 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .topnav.responsive {position: relative;}
@@ -92,15 +87,6 @@ img {
     text-align: left;
   }
 }
-
-@media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
 
 main {
   font-size: 130%;
@@ -140,7 +126,7 @@ main {
 
 .error{
   display: none;
-  font-size: 0.7em;
+  font-size: 0.6em;
   color: #FE142F;
 }
 
@@ -195,7 +181,7 @@ main {
 
 label {
   font-family: var(--font-default);
-  font-size: 17px;
+  font-size: 0.6em;
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
@@ -205,14 +191,22 @@ input {
   border: 0.8px solid #ccc;
   outline: none;
 }
+
 .text-control {
   margin: 0;
   padding: 8px;
   width: 100%;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 0.7em;
   height: 48px;
 }
+
+/* .error-box{
+  
+  border-color: #FE142F;
+  border-width: 2px;
+} */
+
 .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
@@ -231,12 +225,13 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
+
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
     color: red;
-} */
+}
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -244,6 +239,7 @@ input[data-error]::after {
   font-size: 12px;
   font-weight: normal;
 }
+
 .checkbox-label .checkbox-icon,
 .checkbox2-label .checkbox-icon {
   display: block;
@@ -409,6 +405,7 @@ input[data-error]::after {
   font-weight: normal;
   font-size: 16px;
 }
+
 .hero-section {
   height: 26em;
   border-radius: 10px;
@@ -418,6 +415,7 @@ input[data-error]::after {
   box-shadow: 0 12px 12px 0px rgba(0, 0, 0, 0.25);
   margin-bottom: 10px;
 }
+
 .hero-content {
   padding: 51px 67px;
   grid-column: span 4;
@@ -427,6 +425,7 @@ input[data-error]::after {
   text-align: left;
   min-width: 424px;
 }
+
 .hero-content::after {
   content: "";
   width: 100%;
@@ -480,44 +479,104 @@ input[data-error]::after {
 .hero-section > .btn-signup {
   display: none;
 }
+
+.valid-inscription{
+  font-size: 1.3em;
+  text-align: center;
+  margin: 8em 2em;
+
+}
+
 footer {
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
+
+  .header-logo{
+    margin: 0.8em 0 0 1em;
+  }
+
+  .logo{
+    width: 55%;
+  }
+
+  .fa {
+    font-size: 1.5em;
+  }
+
+  .topnav a {
+    display: none;
+  }
+
+  .topnav a.icon{
+    float: right;
+    display: block;
+    margin-top: 0.5em;
+    color: red;
+  }
+
+  .bground{
+    top: 3.5em;
+  }
+
+  label{
+    font-size: 0.5em;
+  }
+
+  .checkbox-label .checkbox2-label{
+    font-size: 0.5em;
+  }
+
   .hero-section {
     display: block;
     box-shadow: unset;
+    height: 27em;
   }
+
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 0;
+    margin-top: 1em;
   }
+
   .hero-content::after {
     content: unset;
   }
+
   .hero-content .btn-signup {
     display: none;
   }
+
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     white-space: normal;
   }
+
   .hero-text {
-    width: unset;
-    font-size: 1.5rem;
+    font-size: 0.6em;
+    margin-top: 2em;
   }
+
   .hero-img img {
     border-radius: 10px;
     margin-top: 40px;
   }
+
   .hero-section > .btn-signup {
     display: block;
     margin: 32px auto 10px;
     padding: 12px 35px;
   }
+
+  .valid-inscription{
+    font-size: 1.2em;
+    margin: 9em 2em;
+  
+  }
+
   .copyrights {
     margin-top: 50px;
     text-align: center;

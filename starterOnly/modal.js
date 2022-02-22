@@ -28,7 +28,6 @@ function closeModal(){
   modalbg.style.display = "none";
 }
 
-
 /**
  * Conditions de vérification pour la modal
  */
@@ -38,10 +37,13 @@ let verifTab = [];
 console.log(verifTab);
 const btn_submit = document.getElementById('submit');
 
+
+
 btn_submit.addEventListener('click', submissionForm);
 
 function submissionForm(){
-    
+
+  const modal_body = document.getElementById('modal_body');
   check_prenom();
   check_nom();
   check_email();
@@ -58,12 +60,30 @@ function submissionForm(){
       countTrue++;
     }
   }
-
+  
   if(countTrue == verifTab.length){
+    const inscription = document.getElementById('inscription');
+
+    // reset le formulaire d'inscription après inscription réussie
     document.getElementById('inscription').reset();
+    // ferme la modal suite a la soumission du formulaire
+    inscription.style.display = "none";
+    // initialise le nouveau texte de la modal
+    modal_body.innerHTML = '<div class="valid-inscription"><p class="valid-inscription-p">Merci pour votre inscription</p></div><input id="fermer" class="btn-submit button" type="submit" value="Fermer"/>';
+    // rouvre la modal avec le mot de validation de l'inscription
+    modal_body.style.display = "block";
+    
   }else{
     event.preventDefault();
     false;
+  }
+
+  // Ferme la modal après affichage du mot de validation d'inscription
+  const fermerModal = document.getElementById('fermer');
+  fermerModal.addEventListener("click", valideModal);
+
+  function valideModal(){
+    modalbg.style.display = "none";
   }
 } 
 // console.log(submissionForm());
