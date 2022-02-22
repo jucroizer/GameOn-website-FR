@@ -8,13 +8,12 @@ function editNav() {
 }
 
 // DOM Elements
-const modalbg = document.querySelector(".bground");
-const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
-const closeBtn = document.querySelector(".close");
+const modalbg = document.getElementById("bground");
+const modalBtn = document.getElementById("modal-btn");
+const closeBtn = document.getElementById("close");
 
 // launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+modalBtn.addEventListener("click", launchModal);
 
 // launch modal form
 function launchModal() {
@@ -237,10 +236,11 @@ function check_location(){
    }
 }
 
+/**
+  * Vérificcation checkbox - conditions générales
+  */
 function check_condition(){
-  /**
-   * Vérificcation checkbox - conditions générales
-   */
+  
    let condition_input = document.getElementById('checkbox1');
    let error_condition = document.getElementById('error_checkbox');
  
