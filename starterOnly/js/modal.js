@@ -10,10 +10,12 @@ function editNav() {
 // DOM Elements
 const modalbg = document.getElementById("bground");
 const modalBtn = document.getElementById("modal-btn");
+const modalBtnMob = document.getElementById("modal-btn-mobile");
 const closeBtn = document.getElementById("close");
 
 // launch modal event
 modalBtn.addEventListener("click", launchModal);
+modalBtnMob.addEventListener("click", launchModal);
 
 // launch modal form
 function launchModal() {
@@ -60,10 +62,11 @@ function submissionForm(){
       countTrue++;
     }
   }
+
+  const inscription = document.getElementById('inscription');
   
   if(countTrue == verifTab.length){
-    const inscription = document.getElementById('inscription');
-
+    
     // reset le formulaire d'inscription après inscription réussie
     document.getElementById('inscription').reset();
     // ferme la modal suite a la soumission du formulaire
@@ -85,6 +88,7 @@ function submissionForm(){
 
   function valideModal(){
     modalbg.style.display = "none";
+    location.reload();
   }
 }
 
@@ -237,7 +241,7 @@ function check_location(){
 }
 
 /**
-  * Vérificcation checkbox - conditions générales
+  * Vérification checkbox - conditions générales
   */
 function check_condition(){
   
