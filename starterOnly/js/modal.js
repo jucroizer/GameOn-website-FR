@@ -97,7 +97,8 @@ function submissionForm(){
 */
 function check_prenom(){
     
-    let prenom = document.getElementById("first").value;
+    let prenom = document.getElementById("first").value.trim();
+    console.log(prenom);
     let error_first = document.getElementById('error_first');
     const verif_prenom = /^[a-zA-Zéī\ ]+$/; // ne prend en compte que les lettres et les espaces
 
@@ -120,7 +121,7 @@ function check_prenom(){
   */
 function check_nom(){
   
-  let nom = document.getElementById('last').value;
+  let nom = document.getElementById('last').value.trim();
   let error_last = document.getElementById('error_last');
   const verif_nom = /^[a-zA-Zéī\ ]+$/; // Vérifier si le nom contient bien que des lettres et les espaces
 
