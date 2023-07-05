@@ -1,5 +1,14 @@
-# Projet GameOn
-1. Forkez ce repo ;
-2. Il est conseillé d'utiliser VisualStudio Code et vous pouvez utiliser Docker, mais ce n'est pas obligatoire ;
-3. Il n'y a aucune dépendance ;
-4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
+# GameOn Project
+
+The aim of this project was to complete the implementation of a JavaScript registration form. You can open the form and fill it in. After submitting the form, a modal opens and you can return to the home page.
+
+![GameOn](GameOn.png)
+
+## Installation
+No installation is required, just click on index.html.
+
+## Technologies
+This project was created with:
+* HTML5
+* CSS3
+* JavaScript
